@@ -46,3 +46,32 @@ Here we use OpenShift AI to run:
 - The Llama model endpoint
 - Optional vector database components
 - The entire RAG pipeline
+
+## What Happens in rag.ipynb (Short Overview)
+Inside the notebook, you will:
+1. **Set up the environment**
+- Install llama-stack client
+- Configure environment variables
+- Connect to model endpoints
+
+2. **Generate embeddings**
+- Load local documents or sample text
+- Chunk them
+- Call the embedding API
+- Store vectors in a vector database
+
+3. **Implement retrieval**
+- Run similarity search via Milvus/VectorDB
+
+4. **Perform inference**
+- Call Llama for text generation
+- Provide the retrieved context to ground the answer
+- Print the final RAG output
+- Everything is designed to be simple, minimal, and reproducible for learning and prototyping on OpenShift AI.
+
+## Getting Started
+**Prerequisites**
+- Access to OpenShift AI / RHODS
+- A deployed Llama MaaS model
+- A working Data Science Project
+- Milvus or another vector DB deployed in the same project
